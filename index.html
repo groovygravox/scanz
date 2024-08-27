@@ -15,27 +15,32 @@
             color: #FFFFFF; /* White text */
             margin: 0;
             padding: 0;
-            text-align: center;
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             min-height: 100vh;
-            position: relative;
         }
         .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px;
             padding: 20px;
-            z-index: 10; /* Ensure text is above the image */
         }
-        img {
-            width: 50%; /* Default to 50% width */
+        .left-section img {
+            width: 100%; /* Take full width of the left section */
+            max-width: 500px; /* Limit max size for large screens */
             height: auto;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-            z-index: 5; /* Image below the text */
+        }
+        .right-section {
+            max-width: 50%;
+            text-align: left;
+            padding-left: 20px;
+        }
+        h1, h2 {
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black outline */
         }
         h1 {
             font-size: 48px;
@@ -53,6 +58,7 @@
             font-size: 18px;
             border-radius: 5px;
             display: inline-block;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black outline for button text */
         }
         .join-discord a:hover {
             background-color: #003d82;
@@ -60,8 +66,17 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            img {
+            .container {
+                flex-direction: column; /* Stack elements vertically */
+                text-align: center;
+            }
+            .left-section img {
                 width: 100%; /* Full width on mobile */
+                max-width: 100%; /* No max-width on mobile */
+            }
+            .right-section {
+                max-width: 100%;
+                padding-left: 0;
             }
             h1 {
                 font-size: 36px;
@@ -78,14 +93,18 @@
 </head>
 <body>
     <div class="container">
-        <h1>SCANZ</h1>
-        <h2>Star Citizen Australia & New Zealand</h2>
-        <div class="join-discord">
-            <a href="https://discord.gg/3atj8pjhFH">Join Discord</a>
+        <div class="left-section">
+            <img src="scanz.png" alt="Star Citizen Australia New Zealand Community">
+        </div>
+        <div class="right-section">
+            <h1>SCANZ</h1>
+            <h2>Star Citizen Australia & New Zealand</h2>
+            <div class="join-discord">
+                <a href="https://discord.gg/3atj8pjhFH">Join Discord</a>
+            </div>
         </div>
     </div>
-    <img src="scanz.png" alt="Star Citizen Australia New Zealand Community">
-    
+
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
     {
