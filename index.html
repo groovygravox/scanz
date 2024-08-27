@@ -11,8 +11,8 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #ffffff;
-            color: #000000;
+            background-color: #000000; /* Black background */
+            color: #FFFFFF; /* White text */
             margin: 0;
             padding: 0;
             text-align: center;
@@ -21,14 +21,21 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
+            position: relative;
         }
         .container {
             padding: 20px;
+            z-index: 10; /* Ensure text is above the image */
         }
         img {
-            width: 100%;
-            max-width: 400px; /* Adjust this size based on your design */
+            width: 50%; /* Default to 50% width */
             height: auto;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            z-index: 5; /* Image below the text */
         }
         h1 {
             font-size: 48px;
@@ -53,8 +60,8 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            body {
-                padding: 20px;
+            img {
+                width: 100%; /* Full width on mobile */
             }
             h1 {
                 font-size: 36px;
@@ -71,14 +78,14 @@
 </head>
 <body>
     <div class="container">
-        <img src="scanz.png" alt="Star Citizen Australia New Zealand Community">
         <h1>SCANZ</h1>
         <h2>Star Citizen Australia & New Zealand</h2>
         <div class="join-discord">
             <a href="https://discord.gg/3atj8pjhFH">Join Discord</a>
         </div>
     </div>
-
+    <img src="scanz.png" alt="Star Citizen Australia New Zealand Community">
+    
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
     {
