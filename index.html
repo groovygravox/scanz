@@ -16,13 +16,17 @@
             align-items: center;
             height: 100vh;
             text-align: center;
+            position: relative;
         }
         .container {
             max-width: 800px;
             padding: 20px;
         }
-        img {
-            max-width: 100%;
+        .sheep-image {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            max-width: 30%;
             height: auto;
         }
         h1 {
@@ -51,12 +55,12 @@
     </style>
 </head>
 <body>
+    <img src="SCANZ.png" alt="Sheep Image" class="sheep-image">
     <div class="container">
-        <img src="scanz.png" alt="SCANZ - Star Citizen Australia & New Zealand">
         <h1>SCANZ</h1>
         <h2>Star Citizen Australia & New Zealand</h2>
         <div class="join-discord">
-            <a href="https://discord.com/invite/YOUR_DISCORD_INVITE_LINK">Join Discord</a>
+            <a href="https://discord.gg/3atj8pjhFH">Join Discord</a>
         </div>
     </div>
 </body>
