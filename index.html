@@ -15,34 +15,28 @@
             color: #000000;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             text-align: center;
-            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
         }
         .container {
-            max-width: 800px;
             padding: 20px;
         }
-        .sheep-image {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            max-width: 30%;
+        img {
+            width: 100%;
+            max-width: 400px; /* Adjust this size based on your design */
             height: auto;
         }
         h1 {
             font-size: 48px;
-            margin-bottom: 0;
+            margin: 20px 0 10px 0;
         }
         h2 {
             font-size: 24px;
-            margin-top: 0;
-        }
-        .join-discord {
-            margin-top: 30px;
+            margin: 10px 0 20px 0;
         }
         .join-discord a {
             background-color: #0056b3;
@@ -56,11 +50,28 @@
         .join-discord a:hover {
             background-color: #003d82;
         }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 36px;
+            }
+            h2 {
+                font-size: 18px;
+            }
+            .join-discord a {
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+        }
     </style>
 </head>
 <body>
-    <img src="scanz.png" alt="Star Citizen Australia New Zealand Community" class="sheep-image">
     <div class="container">
+        <img src="scanz.png" alt="Star Citizen Australia New Zealand Community">
         <h1>SCANZ</h1>
         <h2>Star Citizen Australia & New Zealand</h2>
         <div class="join-discord">
