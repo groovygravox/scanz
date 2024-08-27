@@ -29,10 +29,15 @@
             max-width: 1200px;
             padding: 20px;
         }
+        .left-section {
+            flex: 1; /* Take up as much space as possible */
+            max-width: 50%; /* Do not exceed 50% of the screen width */
+            padding: 0; /* Remove padding to ensure the image touches the left edge */
+        }
         .left-section img {
             width: 100%; /* Take full width of the left section */
-            max-width: 500px; /* Limit max size for large screens */
             height: auto;
+            display: block;
         }
         .right-section {
             max-width: 50%;
@@ -70,9 +75,11 @@
                 flex-direction: column; /* Stack elements vertically */
                 text-align: center;
             }
+            .left-section {
+                max-width: 100%; /* Full width on mobile */
+            }
             .left-section img {
                 width: 100%; /* Full width on mobile */
-                max-width: 100%; /* No max-width on mobile */
             }
             .right-section {
                 max-width: 100%;
